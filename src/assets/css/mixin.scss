@@ -1,0 +1,83 @@
+@mixin icon($w,$h,$img) {
+  display: inline-block;
+  width: $w;
+  height: $h;
+  background-image: url($img);
+  background-size: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin hollowIcon($w,$h) {
+  display: inline-block;
+  width: $w;
+  height: $h;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin fillIcon($img) {
+  background-repeat: no-repeat;
+  background-image: url($img);
+}
+@mixin textOmit() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+@mixin showScrollbarY() {
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ececec;
+    border-radius: 5px;
+    box-shadow: none;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+    width: 0;
+  }
+
+}
+@mixin match3_4(){
+  /*适配*/
+
+  /*小的*/
+  width: calc((100% - 60px)/3);
+
+  @media (min-width: 1380px) and (max-width: 1560px){
+
+  }
+  /*大的*/
+  @media (min-width: 651px){
+    width: calc((100% - 80px)/4);
+  }
+  /*end适配*/
+
+}
+
+@mixin matchSide3_4(){
+  /*适配*/
+
+  /*小的*/
+  width: 190px;
+
+  @media (min-width: 1380px) and (max-width: 1560px){
+
+  }
+  /*大的*/
+  @media (min-width: 651px){
+    width: 240px;
+  }
+  /*end适配*/
+
+}
+
+$siderBg: #F9F9F9;
+
+
+
