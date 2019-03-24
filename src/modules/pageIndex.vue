@@ -1,12 +1,14 @@
 <template>
   <div class="pageIndex">
     <pageHeader></pageHeader>
+    <asiderMenu></asiderMenu>
     pageIndex
   </div>
 </template>
 
 <script>
   import pageHeader from '../components/pageHeader';
+  import asiderMenu from '../components/asiderMenu';
 
   export default {
     data(){
@@ -16,7 +18,8 @@
     },
     name: "index",
     components: {
-      pageHeader
+      pageHeader,
+      asiderMenu,
     }
   }
 </script>

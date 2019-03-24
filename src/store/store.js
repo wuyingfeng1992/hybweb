@@ -72,6 +72,7 @@ const mutations = {
 
 }
 const getters = {
+  getPageMenu:(state) => state.pageMenu,
 }
 
 export {state, mutations, actions, getters}
